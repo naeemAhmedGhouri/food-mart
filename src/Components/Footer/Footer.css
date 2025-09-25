@@ -1,0 +1,260 @@
+.footer {
+  background-color: #323232;
+  color: #d9d9d9;
+  padding: 60px 20px 20px 20px;
+  margin-top: 100px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+/* Left Section */
+.footer-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-content-left img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-content-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d9d9d9;
+  margin: 0;
+  text-align: justify;
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-social-icon img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.footer-social-icon img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Center Section */
+.footer-content-center h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.footer-content-center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content-center ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  color: #d9d9d9;
+}
+
+.footer-content-center ul li:hover {
+  color: #ff6b35;
+  padding-left: 10px;
+}
+
+/* Right Section */
+.footer-content-Right h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.footer-content-Right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content-Right ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #d9d9d9;
+  transition: color 0.3s ease;
+}
+
+.footer-content-Right ul li:hover {
+  color: #ff6b35;
+}
+
+/* Copyright Section */
+.footer-copy-right {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #4a4a4a;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 60px;
+    padding: 0 20px;
+  }
+  
+  .footer-content-left img {
+    width: 120px;
+  }
+  
+  .footer-content-left p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 20px 15px;
+    margin-top: 60px;
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-content-left {
+    align-items: center;
+  }
+  
+  .footer-content-left img {
+    width: 100px;
+  }
+  
+  .footer-content-left p {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-social-icon {
+    justify-content: center;
+  }
+  
+  .footer-content-center h2,
+  .footer-content-Right h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content-center ul li,
+  .footer-content-Right ul li {
+    font-size: 15px;
+    padding: 6px 0;
+  }
+  
+  .footer-content-center ul li:hover {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px 15px 10px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+  }
+  
+  .footer-content-left img {
+    width: 80px;
+  }
+  
+  .footer-content-left p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .footer-social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-content-center h2,
+  .footer-content-Right h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-content-center ul li,
+  .footer-content-Right ul li {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  
+  .footer-copy-right {
+    font-size: 12px;
+    padding: 15px 0;
+  }
+}
+
+/* Animation for footer appearance */
+.footer {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional hover effects */
+.footer-content-center ul li,
+.footer-content-Right ul li {
+  position: relative;
+}
+
+.footer-content-center ul li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff6b35;
+  transition: width 0.3s ease;
+}
+
+.footer-content-center ul li:hover::before {
+  width: 100%;
+}

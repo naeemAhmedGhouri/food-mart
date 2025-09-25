@@ -1,0 +1,279 @@
+/* Place Order Form Container */
+.place-order {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 100px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 100px auto 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Left Section - Delivery Information */
+.place-order-left {
+  width: 100%;
+  max-width: 500px;
+}
+
+.place-order-left .title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #333;
+  text-align: left;
+}
+
+/* Input Fields Styling */
+.place-order-left input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #c5c5c5;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.place-order-left input:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.2);
+}
+
+.place-order-left input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Multi-field Container for Side by Side Inputs */
+.multi-fields {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.multi-fields input {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* Right Section - Cart Total */
+.place-order-right {
+  width: 100%;
+  max-width: 450px;
+}
+
+.cart-total {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.cart-total h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  color: #333;
+}
+
+.cart-total-details p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.cart-total-details b {
+  font-size: 18px;
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 15px 0;
+}
+
+/* Payment Button */
+.cart-total button {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 25px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.cart-total button:hover {
+  background: linear-gradient(135deg, #ee5a24, #ff6b6b);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+}
+
+.cart-total button:active {
+  transform: translateY(0);
+}
+
+/* Form Validation Styles */
+.place-order-left input:invalid {
+  border-color: #ff4757;
+}
+
+.place-order-left input:valid {
+  border-color: #2ed573;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .place-order {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .place-order-left,
+  .place-order-right {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .place-order-left .title {
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .cart-total {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .place-order {
+    padding: 10px;
+    margin-top: 30px;
+  }
+
+  .place-order-left .title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .place-order-left input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .multi-fields {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .multi-fields input {
+    margin-bottom: 15px;
+  }
+
+  .cart-total {
+    padding: 20px;
+  }
+
+  .cart-total h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .cart-total-details p {
+    font-size: 14px;
+  }
+
+  .cart-total-details b {
+    font-size: 16px;
+  }
+
+  .cart-total button {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .place-order-left input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .place-order-left .title {
+    font-size: 20px;
+  }
+
+  .cart-total {
+    padding: 15px;
+  }
+
+  .cart-total h2 {
+    font-size: 18px;
+  }
+}
+
+/* Loading Animation for Button */
+.cart-total button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cart-total button:disabled:hover {
+  background: #ccc;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Focus states for accessibility */
+.place-order-left input:focus,
+.cart-total button:focus {
+  outline: 2px solid #ff6b6b;
+  outline-offset: 2px;
+}
+
+/* Smooth animations */
+.place-order-left input,
+.cart-total button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Additional styling for better UX */
+.place-order-left input[type="email"]:invalid:not(:placeholder-shown) {
+  border-color: #ff4757;
+  background-color: #fff5f5;
+}
+
+.place-order-left input[type="email"]:valid:not(:placeholder-shown) {
+  border-color: #2ed573;
+  background-color: #f0fff4;
+}
